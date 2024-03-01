@@ -1,9 +1,8 @@
 import React from "react";
-import Card from "./Card";
 import Category from "./Category";
 
 const Content = () => {
-  const category_images1 = [
+  const category_images = [
     {
       id: 1,
       name: "Mobiles",
@@ -22,7 +21,7 @@ const Content = () => {
     {
       id: 4,
       name: "Clothing",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbYotv_wSFBI93MChEvCNVI17IuEC-a7qV1D6DhUL-g&s",
+      img: "https://i.guim.co.uk/img/media/c7a987116fca5b181e83870ba324ca102e6f0a78/0_192_5760_3456/master/5760.jpg?width=465&dpr=1&s=none",
     },
     {
       id: 5,
@@ -34,7 +33,7 @@ const Content = () => {
   return (
     <div className="Content_div">
       <div className="Content">
-        {category_images1.map((item) => (
+        {category_images.map((item) => (
           <Category key={item.id} name={item.name} img={item.img} />
         ))}
       </div>
