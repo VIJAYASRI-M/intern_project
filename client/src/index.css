@@ -62,14 +62,20 @@ code {
   color: #47585c;
 }
 
-.Content{
-  height: 500px;
+.Content {
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.Footer{
+.Content_div {
+  height: 90vh;
+}
+
+.Footer {
   height: 100px;
   width: 100%;
   background-color: #009fc7;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
 }
