@@ -2,3 +2,5 @@
 @mui/icons-material
 @mui/joy
 react-router-dom
+@reduxjs/toolkit 
+react-redux

@@ -3,9 +3,11 @@ import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useState } from "react";
+import { UseSelector, useSelector } from "react-redux";
 
 const Topnav = () => {
-    const [username,setUsername]=useState("")
+    const username= useSelector((state)=>state.user.value.email)
+    
   return (
     <div className="Topnav">
       <div className="items" id="logo">
