@@ -6,7 +6,7 @@ import { useState } from "react";
 import { UseSelector, useSelector } from "react-redux";
 
 const Topnav = () => {
-    const username= useSelector((state)=>state.user.value.email)
+    const email= useSelector((state)=>state.user.value.email)
     
   return (
     <div className="Topnav">
@@ -21,8 +21,15 @@ const Topnav = () => {
       </div>
 
       <div className="right">
-        {username ? (
-          <>
+        {email ? (
+          email==='admin@shopeall.com'?(<>
+          <div className="button" id="btn"> 
+            <Link to="/addproducts" className="link">
+              Add products
+            </Link>
+          </div>
+          </>):
+          (<>
             <Link to="/cart" style={{ textDecoration: "none" }}>
               <FaShoppingCart size={40} color="white" />
               <div id="carticon">1</div>
@@ -30,7 +37,7 @@ const Topnav = () => {
             <Link to="/profile">
               <div className="profile"></div>
             </Link>
-          </>
+          </>)
         ) : (
           <div className="button">
             <Link to="/login" className="link">

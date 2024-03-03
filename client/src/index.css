@@ -54,11 +54,11 @@ code {
 }
 
 #carticon {
-  background-color: white;
+  background-color: rgb(210, 8, 8);
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  color: #009fc7;
+  color: white;
   display: inline;
   position: absolute;
   margin: -7px;
@@ -81,6 +81,11 @@ code {
   display: flex;
   justify-content: center;
   font-weight: 700;
+}
+
+#btn {
+  width: auto;
+  padding: 5px;
 }
 
 .link {
@@ -113,4 +118,52 @@ code {
   background-color: #009fc7;
   position: fixed;
   bottom: 0px;
+}
+
+.AddProducts {
+  background-color: #009fc7;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AddProducts .form {
+  background-color: white;
+  width: 80%;
+  height: 90%;
+  display: flex;
+}
+.formele {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 5%;
+  width: 45%;
+}
+.label {
+  font-size: 22px;
+}
+.AddProducts input {
+  font-size: 16px;
+  padding-left: 10px;
+  height: 30px;
+}
+
+.AddProducts select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.add {
+  background-color: #009fc7;
+  color: white;
+  border: transparent;
+  outline: transparent;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
 }
