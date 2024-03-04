@@ -178,3 +178,17 @@ code {
 .ProductsList {
   padding: 15px;
 }
+
+.cart {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartcard {
+  height: 100px;
+  width: 100%;
+  background-color: #b8c1c4;
+  border-radius: 10px;
+}

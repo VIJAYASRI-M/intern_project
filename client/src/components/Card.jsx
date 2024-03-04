@@ -5,9 +5,13 @@ import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
 import CardOverflow from "@mui/joy/CardOverflow";
 import Chip from "@mui/joy/Chip";
-import Link from "@mui/joy/Link";
+import TLink from "@mui/joy/Link";
 import Typography from "@mui/joy/Typography";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { addTocart } from "../redux/productSlice";
+import { useDispatch } from "react-redux";
+import cartitemSlice, { addCart } from "../redux/cartitemSlice";
 
 export default function ProductCard({
   category,
@@ -16,7 +20,13 @@ export default function ProductCard({
   name,
   price,
   quantity,
+  id
 }) {
+  const dispatch = useDispatch();
+  const handleaddTocart = (id) => {
+    dispatch(addTocart(id));
+    dispatch(addCart())
+  };
   return (
     <Card sx={{ width: 220, maxWidth: "100%", boxShadow: "lg" }}>
       <CardOverflow>
@@ -60,8 +70,15 @@ export default function ProductCard({
         </Typography>
       </CardContent>
       <CardOverflow>
-        <Button variant="solid" color="danger" size="lg">
-          Add to cart
+        <Button
+          variant="solid"
+          color="danger"
+          size="lg"
+          onClick={()=>handleaddTocart(id)}
+        >
+          <Link to="/cart" style={{ textDecoration: "none", color: "white" }}>
+            Add to cart
+          </Link>
         </Button>
       </CardOverflow>
     </Card>

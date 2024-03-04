@@ -4,13 +4,15 @@ import { useDispatch, useSelector } from "react-redux";
 
 const ProductsList = () => {
   const products = useSelector((state) => state.products.products);
+  const dispatch = useDispatch();
   return (
     <div className="ProductsList">
       <h1>Products</h1>
       <div className="List">
         {products.map((item, index) => (
           <Card
-            key={item.id}
+            key={index}
+            id={item.id}
             category={item.category}
             desc={item.desc}
             img={item.img}
