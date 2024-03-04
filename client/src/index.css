@@ -75,8 +75,9 @@ code {
 
 .button {
   background-color: white;
-  height: 40px;
-  width: 100px;
+  height: auto;
+  width: auto;
+  padding: 8px 15px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -84,14 +85,13 @@ code {
 }
 
 #btn {
-  width: auto;
-  padding: 5px;
+  padding: 8px;
+  text-wrap: wrap;
 }
 
 .link {
   text-decoration: none;
   color: #009fc7;
-  margin-top: 8px;
 }
 
 .Header {
@@ -166,4 +166,15 @@ code {
   cursor: pointer;
   border-radius: 5px;
   margin-top: 5px;
+}
+
+.List {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ProductsList {
+  padding: 15px;
 }

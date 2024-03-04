@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import AddProducts from "./pages/AddProducts";
 import Profile from "./pages/Profile";
+import Cart from "./pages/Cart";
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/products" element={<ProductsList />}></Route>
           <Route path="/addproducts" element={<AddProducts />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/favorites" element={<Favorites />}></Route>
         </Routes>
       </Provider>
     </div>

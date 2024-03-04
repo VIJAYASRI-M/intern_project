@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {sampleProducts} from '../Assets/categoryData'
 
 const initialState = {
   //   value: {
@@ -11,7 +12,7 @@ const initialState = {
   //     cart:false,
   //     favorite:false
   //   },
-  products: [],
+  products: sampleProducts,
 };
 
 export const productSlice = createSlice({
